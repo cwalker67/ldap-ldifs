@@ -1,0 +1,1105 @@
+# --- Base Structure ---
+# dn: dc=starwars,dc=com
+# objectClass: top
+# objectClass: domain
+# dc: starwars
+
+dn: ou=people,dc=starwars,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=starwars,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+dn: ou=locations,dc=starwars,dc=com
+objectClass: organizationalUnit
+ou: locations
+
+# --- People (Characters) ---
+# Note: Added 'objectClass: extensibleObject' to allow the custom 'race' attribute 
+# to import cleanly into strict LDAP directories without requiring a custom schema.
+
+# Core Heroes
+dn: uid=lskywalker,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: lskywalker
+cn: Luke Skywalker
+givenName: Luke
+sn: Skywalker
+mail: luke@jedi.starwars.com
+title: Jedi Master
+description: Hero of the Rebellion, restorer of the Jedi Order
+race: Human
+userPassword: wookie
+
+dn: uid=lorgana,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: lorgana
+cn: Leia Organa
+givenName: Leia
+sn: Organa
+mail: leia@senate.starwars.com
+title: General
+description: Princess of Alderaan, leader in the Rebellion and Resistance
+race: Human
+userPassword: wookie
+
+dn: uid=hsolo,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: hsolo
+cn: Han Solo
+givenName: Han
+sn: Solo
+mail: captain@falcon.starwars.com
+title: Smuggler
+description: Captain of the Millennium Falcon, General in the Rebel Alliance
+race: Human
+userPassword: wookie
+
+dn: uid=chewbacca,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: chewbacca
+cn: Chewbacca
+givenName: Chewbacca
+sn: Wookiee
+mail: chewie@falcon.starwars.com
+title: Co-Pilot
+description: Wookiee warrior, loyal co-pilot of the Millennium Falcon
+race: Wookiee
+userPassword: wookie
+
+# Key Republic & Jedi Leaders
+dn: uid=yoda,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: yoda
+cn: Master Yoda
+givenName: Yoda
+sn: Master
+mail: yoda@jedi.starwars.com
+title: Grand Master
+description: Ancient and wise leader of the Jedi Council
+race: Unknown
+userPassword: wookie
+
+dn: uid=mwindu,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: mwindu
+cn: Mace Windu
+givenName: Mace
+sn: Windu
+mail: mwindu@jedi.starwars.com
+title: Master of the Order
+description: Senior member of the Jedi High Council, Vaapad master
+race: Human
+userPassword: wookie
+
+dn: uid=qjinn,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: qjinn
+cn: Qui-Gon Jinn
+givenName: Qui-Gon
+sn: Jinn
+mail: qjinn@jedi.starwars.com
+title: Jedi Master
+description: Maverick Jedi who discovered Anakin Skywalker
+race: Human
+userPassword: wookie
+
+dn: uid=okenobi,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: okenobi
+cn: Obi-Wan Kenobi
+givenName: Obi-Wan
+sn: Kenobi
+mail: obiwan@jedi.starwars.com
+title: Jedi Master
+description: Jedi General, mentor to Anakin and Luke
+race: Human
+userPassword: wookie
+
+dn: uid=pkoon,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: pkoon
+cn: Plo Koon
+givenName: Plo
+sn: Koon
+mail: pkoon@jedi.starwars.com
+title: Jedi Master
+description: Kel Dor Jedi Master, discovered Ahsoka Tano
+race: Kel Dor
+userPassword: wookie
+
+dn: uid=atano,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: atano
+cn: Ahsoka Tano
+givenName: Ahsoka
+sn: Tano
+mail: ahsoka@fulcrum.starwars.com
+title: Former Jedi
+description: Anakin Skywalker's padawan, Rebel intelligence operative Fulcrum
+race: Togruta
+userPassword: wookie
+
+dn: uid=pamidala,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: pamidala
+cn: Padme Amidala
+givenName: Padme
+sn: Amidala
+mail: padme@senate.starwars.com
+title: Senator
+description: Former Queen and Senator of Naboo
+race: Human
+userPassword: wookie
+
+# Empire & Sith
+dn: uid=spalpatine,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: spalpatine
+cn: Sheev Palpatine
+givenName: Sheev
+sn: Palpatine
+mail: emperor@empire.starwars.com
+title: Emperor
+description: Darth Sidious, Dark Lord of the Sith, Ruler of the Galactic Empire
+race: Human
+userPassword: wookie
+
+dn: uid=dvader,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: dvader
+cn: Darth Vader
+givenName: Anakin
+sn: Skywalker
+mail: vader@empire.starwars.com
+title: Sith Lord
+description: Supreme Commander of the Imperial Fleet
+race: Human
+userPassword: wookie
+
+dn: uid=cdooku,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: cdooku
+cn: Count Dooku
+givenName: Dooku
+sn: Serenno
+mail: dooku@cis.starwars.com
+title: Sith Lord
+description: Darth Tyranus, former Jedi Master, leader of the Separatists
+race: Human
+userPassword: wookie
+
+dn: uid=dplagueis,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: dplagueis
+cn: Darth Plagueis
+givenName: Hego
+sn: Damask
+mail: plagueis@sith.starwars.com
+title: Sith Lord
+description: Dark Lord of the Sith, master to Darth Sidious
+race: Muun
+userPassword: wookie
+
+# Inquisitors
+dn: uid=ginquisitor,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: ginquisitor
+cn: Grand Inquisitor
+givenName: Grand
+sn: Inquisitor
+mail: inquisitor@empire.starwars.com
+title: Grand Inquisitor
+description: Former Jedi Temple Guard, hunter of surviving Jedi
+race: Pau'an
+userPassword: wookie
+
+dn: uid=tsuduri,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: tsuduri
+cn: Trilla Suduri
+givenName: Trilla
+sn: Suduri
+mail: secondsister@empire.starwars.com
+title: Second Sister
+description: Imperial Inquisitor, former Jedi Padawan
+race: Human
+userPassword: wookie
+
+dn: uid=rsevander,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: rsevander
+cn: Reva Sevander
+givenName: Reva
+sn: Sevander
+mail: thirdsister@empire.starwars.com
+title: Third Sister
+description: Ambitious Imperial Inquisitor
+race: Human
+userPassword: wookie
+
+# Nightsisters & Dark Adepts
+dn: uid=dmaul,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: dmaul
+cn: Darth Maul
+givenName: Maul
+sn: Unknown
+mail: maul@shadow.starwars.com
+title: Crime Lord
+description: Former Sith Lord, leader of the Crimson Dawn
+race: Zabrak
+userPassword: wookie
+
+dn: uid=mtalzin,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: mtalzin
+cn: Mother Talzin
+givenName: Mother
+sn: Talzin
+mail: talzin@dathomir.starwars.com
+title: Clan Mother
+description: Shaman and leader of the Nightsisters
+race: Dathomirian
+userPassword: wookie
+
+dn: uid=aventress,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: aventress
+cn: Asajj Ventress
+givenName: Asajj
+sn: Ventress
+mail: asajj@dathomir.starwars.com
+title: Assassin
+description: Dathomirian assassin, former Sith acolyte
+race: Dathomirian
+userPassword: wookie
+
+# The Ghost Crew (Lothal Rebels)
+dn: uid=hsyndulla,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: hsyndulla
+cn: Hera Syndulla
+givenName: Hera
+sn: Syndulla
+mail: hera@rebellion.starwars.com
+title: General
+description: Twi'lek pilot of the Ghost, leader of Spectres
+race: Twi'lek
+userPassword: wookie
+
+dn: uid=kjarrus,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: kjarrus
+cn: Kanan Jarrus
+givenName: Kanan
+sn: Jarrus
+mail: kanan@jedi.starwars.com
+title: Jedi Knight
+description: Survivor of Order 66, Caleb Dume, mentor to Ezra
+race: Human
+userPassword: wookie
+
+dn: uid=ebridger,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: ebridger
+cn: Ezra Bridger
+givenName: Ezra
+sn: Bridger
+mail: ezra@rebellion.starwars.com
+title: Jedi Padawan
+description: Rebel insurgent from Lothal
+race: Human
+userPassword: wookie
+
+dn: uid=swren,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: swren
+cn: Sabine Wren
+givenName: Sabine
+sn: Wren
+mail: sabine@rebellion.starwars.com
+title: Mandalorian Warrior
+description: Explosives expert, wielder of the Darksaber
+race: Human
+userPassword: wookie
+
+dn: uid=gorrelios,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: gorrelios
+cn: Garazeb Orrelios
+givenName: Garazeb
+sn: Orrelios
+mail: zeb@rebellion.starwars.com
+title: Honor Guard
+description: Lasat warrior, muscle of the Ghost crew
+race: Lasat
+userPassword: wookie
+
+dn: uid=chopper,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: chopper
+cn: C1-10P Chopper
+givenName: C1-10P
+sn: Droid
+mail: chopper@rebellion.starwars.com
+title: Astromech Droid
+description: Grumpy, homicidal astromech of the Ghost
+race: Droid
+userPassword: wookie
+
+# Additional Rebel Alliance Leaders & Operatives
+dn: uid=mmothma,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: mmothma
+cn: Mon Mothma
+givenName: Mon
+sn: Mothma
+mail: mmothma@senate.starwars.com
+title: Chancellor
+description: Leader of the Rebel Alliance and first Chancellor of the New Republic
+race: Human
+userPassword: wookie
+
+dn: uid=gackbar,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: gackbar
+cn: Gial Ackbar
+givenName: Gial
+sn: Ackbar
+mail: ackbar@rebellion.starwars.com
+title: Fleet Admiral
+description: Mon Calamari military commander
+race: Mon Calamari
+userPassword: wookie
+
+dn: uid=wantilles,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: wantilles
+cn: Wedge Antilles
+givenName: Wedge
+sn: Antilles
+mail: wedge@rebellion.starwars.com
+title: Commander
+description: Legendary Rogue Squadron pilot
+race: Human
+userPassword: wookie
+
+dn: uid=candor,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: candor
+cn: Cassian Andor
+givenName: Cassian
+sn: Andor
+mail: cassian@rebellion.starwars.com
+title: Intelligence Officer
+description: Rebel spy, instrumental in stealing Death Star plans
+race: Human
+userPassword: wookie
+
+dn: uid=jerso,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: jerso
+cn: Jyn Erso
+givenName: Jyn
+sn: Erso
+mail: jyn@rebellion.starwars.com
+title: Sergeant
+description: Rogue operative of Rogue One
+race: Human
+userPassword: wookie
+
+dn: uid=lcalrissian,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: lcalrissian
+cn: Lando Calrissian
+givenName: Lando
+sn: Calrissian
+mail: lando@bespin.starwars.com
+title: General
+description: Administrator of Cloud City, Rebel General
+race: Human
+userPassword: wookie
+
+# First Order & Resistance
+dn: uid=kren,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: kren
+cn: Kylo Ren
+givenName: Ben
+sn: Solo
+mail: kylo@firstorder.starwars.com
+title: Supreme Leader
+description: Master of the Knights of Ren, fallen Jedi
+race: Human
+userPassword: wookie
+
+dn: uid=ahux,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: ahux
+cn: Armitage Hux
+givenName: Armitage
+sn: Hux
+mail: hux@firstorder.starwars.com
+title: General
+description: High-ranking commander of the First Order military
+race: Human
+userPassword: wookie
+
+dn: uid=cphasma,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: cphasma
+cn: Captain Phasma
+givenName: Phasma
+sn: Unknown
+mail: phasma@firstorder.starwars.com
+title: Captain
+description: Commander of the First Order stormtroopers
+race: Human
+userPassword: wookie
+
+dn: uid=rey,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: rey
+cn: Rey Skywalker
+givenName: Rey
+sn: Skywalker
+mail: rey@resistance.starwars.com
+title: Jedi Knight
+description: Scavenger from Jakku, last of the Jedi
+race: Human
+userPassword: wookie
+
+dn: uid=pdameron,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: pdameron
+cn: Poe Dameron
+givenName: Poe
+sn: Dameron
+mail: poe@resistance.starwars.com
+title: General
+description: Best pilot in the Resistance, leader of Black Squadron
+race: Human
+userPassword: wookie
+
+dn: uid=finn,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: finn
+cn: Finn
+givenName: Finn
+sn: FN-2187
+mail: finn@resistance.starwars.com
+title: General
+description: Former First Order stormtrooper turned Resistance hero
+race: Human
+userPassword: wookie
+
+dn: uid=rtico,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: rtico
+cn: Rose Tico
+givenName: Rose
+sn: Tico
+mail: rose@resistance.starwars.com
+title: Commander
+description: Maintenance worker turned Resistance leader
+race: Human
+userPassword: wookie
+
+dn: uid=aholdo,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: aholdo
+cn: Amilyn Holdo
+givenName: Amilyn
+sn: Holdo
+mail: holdo@resistance.starwars.com
+title: Vice Admiral
+description: Strategic commander in the Resistance
+race: Human
+userPassword: wookie
+
+# Mandalorians & Bounty Hunters
+dn: uid=ddjarin,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: ddjarin
+cn: Din Djarin
+givenName: Din
+sn: Djarin
+mail: mando@bounty.starwars.com
+title: Bounty Hunter
+description: The Mandalorian, caretaker of Grogu
+race: Human
+userPassword: wookie
+
+dn: uid=grogu,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: grogu
+cn: Grogu
+givenName: Grogu
+sn: Unknown
+mail: grogu@mandalore.starwars.com
+title: Mandalorian Foundling
+description: Force-sensitive child, former Jedi initiate
+race: Unknown
+userPassword: wookie
+
+dn: uid=bfett,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: bfett
+cn: Boba Fett
+givenName: Boba
+sn: Fett
+mail: boba@bounty.starwars.com
+title: Daimyo
+description: Infamous bounty hunter, unaltered clone
+race: Human
+userPassword: wookie
+
+# Crime Syndicates
+dn: uid=jtiure,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: jtiure
+cn: Jabba the Hutt
+givenName: Jabba
+sn: Tiure
+mail: jabba@cartel.starwars.com
+title: Crime Lord
+description: Head of the Hutt Cartel on Tatooine
+race: Hutt
+userPassword: wookie
+
+dn: uid=r2d2,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: r2d2
+cn: R2-D2
+givenName: R2
+sn: D2
+mail: r2d2@rebellion.starwars.com
+title: Astromech Droid
+description: Heroic astromech who has saved the galaxy multiple times
+race: Droid
+userPassword: wookie
+
+dn: uid=c3po,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: c3po
+cn: C-3PO
+givenName: C
+sn: 3PO
+mail: c3po@senate.starwars.com
+title: Protocol Droid
+description: Fluent in over six million forms of communication
+race: Droid
+userPassword: wookie
+
+dn: uid=bb8,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: bb8
+cn: BB-8
+givenName: BB
+sn: 8
+mail: bb8@resistance.starwars.com
+title: Astromech Droid
+description: Loyal astromech of Poe Dameron
+race: Droid
+userPassword: wookie
+
+dn: uid=k2so,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: k2so
+cn: K-2SO
+givenName: K
+sn: 2SO
+mail: k2so@rebellion.starwars.com
+title: Security Droid
+description: Reprogrammed Imperial enforcer droid
+race: Droid
+userPassword: wookie
+
+dn: uid=ig11,ou=people,dc=starwars,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+objectClass: extensibleObject
+uid: ig11
+cn: IG-11
+givenName: IG
+sn: 11
+mail: ig11@bounty.starwars.com
+title: Assassin Droid
+description: Assassin droid reprogrammed for nursing and protection
+race: Droid
+userPassword: wookie
+
+# --- Groups (Factions & Organizations) ---
+
+dn: cn=galactic_empire,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: galactic_empire
+description: The authoritarian government replacing the Galactic Republic
+member: uid=spalpatine,ou=people,dc=starwars,dc=com
+member: uid=dvader,ou=people,dc=starwars,dc=com
+member: uid=ginquisitor,ou=people,dc=starwars,dc=com
+member: uid=tsuduri,ou=people,dc=starwars,dc=com
+member: uid=rsevander,ou=people,dc=starwars,dc=com
+
+dn: cn=new_republic,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: new_republic
+description: The democratic government established after the fall of the Empire
+member: uid=mmothma,ou=people,dc=starwars,dc=com
+member: uid=lorgana,ou=people,dc=starwars,dc=com
+member: uid=lskywalker,ou=people,dc=starwars,dc=com
+member: uid=hsyndulla,ou=people,dc=starwars,dc=com
+
+dn: cn=rebel_alliance,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: rebel_alliance
+description: The Alliance to Restore the Republic
+member: uid=mmothma,ou=people,dc=starwars,dc=com
+member: uid=lorgana,ou=people,dc=starwars,dc=com
+member: uid=lskywalker,ou=people,dc=starwars,dc=com
+member: uid=hsolo,ou=people,dc=starwars,dc=com
+member: uid=chewbacca,ou=people,dc=starwars,dc=com
+member: uid=lcalrissian,ou=people,dc=starwars,dc=com
+member: uid=gackbar,ou=people,dc=starwars,dc=com
+member: uid=wantilles,ou=people,dc=starwars,dc=com
+member: uid=candor,ou=people,dc=starwars,dc=com
+member: uid=jerso,ou=people,dc=starwars,dc=com
+member: uid=hsyndulla,ou=people,dc=starwars,dc=com
+member: uid=kjarrus,ou=people,dc=starwars,dc=com
+member: uid=ebridger,ou=people,dc=starwars,dc=com
+member: uid=swren,ou=people,dc=starwars,dc=com
+member: uid=gorrelios,ou=people,dc=starwars,dc=com
+member: uid=chopper,ou=people,dc=starwars,dc=com
+member: uid=atano,ou=people,dc=starwars,dc=com
+member: uid=r2d2,ou=people,dc=starwars,dc=com
+member: uid=c3po,ou=people,dc=starwars,dc=com
+member: uid=k2so,ou=people,dc=starwars,dc=com
+
+dn: cn=first_order,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: first_order
+description: Military junta formed from the remnants of the Empire
+member: uid=kren,ou=people,dc=starwars,dc=com
+member: uid=spalpatine,ou=people,dc=starwars,dc=com
+member: uid=ahux,ou=people,dc=starwars,dc=com
+member: uid=cphasma,ou=people,dc=starwars,dc=com
+
+dn: cn=resistance,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: resistance
+description: Private paramilitary force opposing the First Order
+member: uid=lorgana,ou=people,dc=starwars,dc=com
+member: uid=rey,ou=people,dc=starwars,dc=com
+member: uid=pdameron,ou=people,dc=starwars,dc=com
+member: uid=finn,ou=people,dc=starwars,dc=com
+member: uid=rtico,ou=people,dc=starwars,dc=com
+member: uid=aholdo,ou=people,dc=starwars,dc=com
+member: uid=chewbacca,ou=people,dc=starwars,dc=com
+member: uid=r2d2,ou=people,dc=starwars,dc=com
+member: uid=c3po,ou=people,dc=starwars,dc=com
+member: uid=bb8,ou=people,dc=starwars,dc=com
+
+# --- Force Orders ---
+
+dn: cn=jedi_order,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: jedi_order
+description: Keepers of the peace, users of the light side of the Force
+member: uid=yoda,ou=people,dc=starwars,dc=com
+member: uid=mwindu,ou=people,dc=starwars,dc=com
+member: uid=qjinn,ou=people,dc=starwars,dc=com
+member: uid=okenobi,ou=people,dc=starwars,dc=com
+member: uid=pkoon,ou=people,dc=starwars,dc=com
+member: uid=kjarrus,ou=people,dc=starwars,dc=com
+member: uid=ebridger,ou=people,dc=starwars,dc=com
+member: uid=lskywalker,ou=people,dc=starwars,dc=com
+member: uid=rey,ou=people,dc=starwars,dc=com
+member: uid=grogu,ou=people,dc=starwars,dc=com
+
+dn: cn=sith,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: sith
+description: Ancient order dedicated to the dark side of the Force
+member: uid=dplagueis,ou=people,dc=starwars,dc=com
+member: uid=spalpatine,ou=people,dc=starwars,dc=com
+member: uid=cdooku,ou=people,dc=starwars,dc=com
+member: uid=dvader,ou=people,dc=starwars,dc=com
+member: uid=dmaul,ou=people,dc=starwars,dc=com
+
+dn: cn=inquisitors,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: inquisitors
+description: Dark side adepts tasked with hunting Jedi
+member: uid=ginquisitor,ou=people,dc=starwars,dc=com
+member: uid=tsuduri,ou=people,dc=starwars,dc=com
+member: uid=rsevander,ou=people,dc=starwars,dc=com
+
+dn: cn=nightsisters,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: nightsisters
+description: Witches of Dathomir utilizing dark magick
+member: uid=mtalzin,ou=people,dc=starwars,dc=com
+member: uid=aventress,ou=people,dc=starwars,dc=com
+
+dn: cn=knights_of_ren,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: knights_of_ren
+description: Dark side organization active during the New Republic era
+member: uid=kren,ou=people,dc=starwars,dc=com
+
+# --- Warrior Cultures & Syndicates ---
+
+dn: cn=mandalorians,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: mandalorians
+description: Clan-based cultural group consisting of legendary warriors
+member: uid=ddjarin,ou=people,dc=starwars,dc=com
+member: uid=grogu,ou=people,dc=starwars,dc=com
+member: uid=bfett,ou=people,dc=starwars,dc=com
+member: uid=swren,ou=people,dc=starwars,dc=com
+member: uid=ig11,ou=people,dc=starwars,dc=com
+
+dn: cn=hutts,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: hutts
+description: Powerful crime family ruling over much of the Outer Rim
+member: uid=jtiure,ou=people,dc=starwars,dc=com
+
+dn: cn=shadow_collective,ou=groups,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: shadow_collective
+description: Criminal alliance founded by Darth Maul
+member: uid=dmaul,ou=people,dc=starwars,dc=com
+
+
+# --- Specific Places and Who Is There ---
+
+dn: cn=coruscant,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: coruscant
+description: Ecumenopolis and historic capital of the galaxy
+member: uid=yoda,ou=people,dc=starwars,dc=com
+member: uid=mwindu,ou=people,dc=starwars,dc=com
+member: uid=pkoon,ou=people,dc=starwars,dc=com
+member: uid=spalpatine,ou=people,dc=starwars,dc=com
+member: uid=mmothma,ou=people,dc=starwars,dc=com
+
+dn: cn=alderaan,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: alderaan
+description: Peaceful core world, famously destroyed by the Death Star
+member: uid=lorgana,ou=people,dc=starwars,dc=com
+
+dn: cn=corellia,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: corellia
+description: Industrial planet famous for its shipyards and pilots
+member: uid=hsolo,ou=people,dc=starwars,dc=com
+member: uid=chewbacca,ou=people,dc=starwars,dc=com
+
+dn: cn=tatooine,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: tatooine
+description: Desert planet in the Outer Rim, controlled by the Hutts
+member: uid=lskywalker,ou=people,dc=starwars,dc=com
+member: uid=jtiure,ou=people,dc=starwars,dc=com
+member: uid=bfett,ou=people,dc=starwars,dc=com
+member: uid=grogu,ou=people,dc=starwars,dc=com
+member: uid=r2d2,ou=people,dc=starwars,dc=com
+member: uid=c3po,ou=people,dc=starwars,dc=com
+member: uid=ig11,ou=people,dc=starwars,dc=com
+
+dn: cn=lothal,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: lothal
+description: Outer Rim planet, birthplace of a major rebel cell
+member: uid=ebridger,ou=people,dc=starwars,dc=com
+member: uid=hsyndulla,ou=people,dc=starwars,dc=com
+member: uid=kjarrus,ou=people,dc=starwars,dc=com
+member: uid=swren,ou=people,dc=starwars,dc=com
+member: uid=gorrelios,ou=people,dc=starwars,dc=com
+member: uid=chopper,ou=people,dc=starwars,dc=com
+
+dn: cn=exegol,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: exegol
+description: Hidden Sith world in the Unknown Regions
+member: uid=spalpatine,ou=people,dc=starwars,dc=com
+member: uid=kren,ou=people,dc=starwars,dc=com
+member: uid=rey,ou=people,dc=starwars,dc=com
+member: uid=pdameron,ou=people,dc=starwars,dc=com
+member: uid=finn,ou=people,dc=starwars,dc=com
+member: uid=bb8,ou=people,dc=starwars,dc=com
+
+dn: cn=naboo,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: naboo
+description: Mid Rim planet known for its art and architecture
+member: uid=pamidala,ou=people,dc=starwars,dc=com
+member: uid=qjinn,ou=people,dc=starwars,dc=com
+
+dn: cn=endor,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: endor
+description: Forest moon, site of the Empire's final major defeat
+member: uid=lskywalker,ou=people,dc=starwars,dc=com
+member: uid=lorgana,ou=people,dc=starwars,dc=com
+member: uid=hsolo,ou=people,dc=starwars,dc=com
+member: uid=chewbacca,ou=people,dc=starwars,dc=com
+member: uid=gackbar,ou=people,dc=starwars,dc=com
+member: uid=wantilles,ou=people,dc=starwars,dc=com
+member: uid=r2d2,ou=people,dc=starwars,dc=com
+member: uid=c3po,ou=people,dc=starwars,dc=com
+
+dn: cn=mustafar,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: mustafar
+description: Volcanic world, site of Darth Vader's castle
+member: uid=dvader,ou=people,dc=starwars,dc=com
+
+dn: cn=kamino,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: kamino
+description: Aquatic planet outside the main galaxy, home to the cloners
+member: uid=okenobi,ou=people,dc=starwars,dc=com
+
+dn: cn=dathomir,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: dathomir
+description: Remote, red-lit planet steeped in the dark side
+member: uid=dmaul,ou=people,dc=starwars,dc=com
+member: uid=aventress,ou=people,dc=starwars,dc=com
+member: uid=mtalzin,ou=people,dc=starwars,dc=com
+
+dn: cn=bespin,ou=locations,dc=starwars,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: bespin
+description: Gas giant home to Cloud City and tibanna gas mining
+member: uid=lcalrissian,ou=people,dc=starwars,dc=com
+

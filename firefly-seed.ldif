@@ -1,0 +1,377 @@
+# --- Base Structure ---
+# dn: dc=firefly,dc=com
+# objectClass: top
+# objectClass: domain
+# dc: firefly
+
+dn: ou=people,dc=firefly,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=firefly,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+# --- People (Crew & Passengers) ---
+
+dn: uid=mreynolds,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: mreynolds
+cn: Malcolm Reynolds
+givenName: Malcolm
+sn: Reynolds
+mail: captain@serenity.firefly.com
+title: Captain
+description: Browncoat veteran, owner of Serenity
+userPassword: serenity
+
+dn: uid=zwashburne,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: zwashburne
+cn: Zoe Washburne
+givenName: Zoe
+sn: Washburne
+mail: zoe@serenity.firefly.com
+title: First Mate
+description: Second-in-command, Browncoat veteran
+userPassword: serenity
+
+dn: uid=hwashburne,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: hwashburne
+cn: Hoban Washburne
+givenName: Hoban
+sn: Washburne
+mail: wash@serenity.firefly.com
+title: Pilot
+description: Primary helmsman, plays with dinosaurs
+userPassword: serenity
+
+dn: uid=kfrye,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: kfrye
+cn: Kaywinnet Lee Frye
+givenName: Kaywinnet Lee
+sn: Frye
+mail: kaylee@serenity.firefly.com
+title: Mechanic
+description: Engineering prodigy
+userPassword: serenity
+
+dn: uid=jcobb,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: jcobb
+cn: Jayne Cobb
+givenName: Jayne
+sn: Cobb
+mail: jayne@serenity.firefly.com
+title: Public Relations
+description: Mercenary, heavy weapons specialist
+userPassword: serenity
+
+dn: uid=iserra,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: iserra
+cn: Inara Serra
+givenName: Inara
+sn: Serra
+mail: inara@guild.firefly.com
+title: Ambassador
+description: Registered Companion, leases shuttle 1
+userPassword: serenity
+
+dn: uid=stam,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: stam
+cn: Simon Tam
+givenName: Simon
+sn: Tam
+mail: simon.tam@med.firefly.com
+title: Medic
+description: Trauma surgeon, currently a fugitive
+userPassword: serenity
+
+dn: uid=rtam,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: rtam
+cn: River Tam
+givenName: River
+sn: Tam
+mail: river@serenity.firefly.com
+title: Asset
+description: Telepathic prodigy, combat specialist
+userPassword: serenity
+
+dn: uid=dbook,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: dbook
+cn: Derrial Book
+givenName: Derrial
+sn: Book
+mail: book@abbey.firefly.com
+title: Shepherd
+description: Clergy with a mysterious past
+userPassword: serenity
+
+# --- Extended Universe (Recurring Characters) ---
+
+dn: uid=badger,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: badger
+cn: Badger
+givenName: Badger
+sn: Badger
+mail: badger@persephone.underworld.firefly.com
+title: Smuggler
+description: "Honest" businessman and fence on Persephone
+userPassword: serenity
+
+dn: uid=aniska,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: aniska
+cn: Adelei Niska
+givenName: Adelei
+sn: Niska
+mail: niska@skyplex.firefly.com
+title: Crime Lord
+description: Ruthless syndicate leader with a penchant for torture
+userPassword: serenity
+
+dn: uid=saffron,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: saffron
+cn: Saffron
+givenName: Saffron
+sn: Bridget
+mail: saffron@con.firefly.com
+title: Con Artist
+description: AKA Bridget, AKA Yolanda. Master manipulator and thief.
+userPassword: serenity
+
+dn: uid=jearly,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: jearly
+cn: Jubal Early
+givenName: Jubal
+sn: Early
+mail: jearly@bounty.firefly.com
+title: Bounty Hunter
+description: Eccentric, philosophical, and highly dangerous tracker
+userPassword: serenity
+
+dn: uid=fanty,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: fanty
+cn: Fantomas
+givenName: Fantomas
+sn: Twin
+mail: fanty@fences.firefly.com
+title: Fence
+description: Smuggler twin, slightly prettier than Mingo
+userPassword: serenity
+
+dn: uid=mingo,ou=people,dc=firefly,dc=com
+objectClass: inetOrgPerson
+objectClass: organizationalPerson
+objectClass: person
+objectClass: top
+uid: mingo
+cn: Mingojerry
+givenName: Mingojerry
+sn: Twin
+mail: mingo@fences.firefly.com
+title: Fence
+description: Smuggler twin
+userPassword: serenity
+
+# --- Groups ---
+
+dn: cn=crew,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: crew
+description: The core operating crew of the ship
+member: uid=mreynolds,ou=people,dc=firefly,dc=com
+member: uid=zwashburne,ou=people,dc=firefly,dc=com
+member: uid=hwashburne,ou=people,dc=firefly,dc=com
+member: uid=kfrye,ou=people,dc=firefly,dc=com
+member: uid=jcobb,ou=people,dc=firefly,dc=com
+
+dn: cn=passengers,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: passengers
+description: Non-operating personnel and clients
+member: uid=iserra,ou=people,dc=firefly,dc=com
+member: uid=stam,ou=people,dc=firefly,dc=com
+member: uid=rtam,ou=people,dc=firefly,dc=com
+member: uid=dbook,ou=people,dc=firefly,dc=com
+
+dn: cn=command,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: command
+description: Ship leadership and strategic planning
+member: uid=mreynolds,ou=people,dc=firefly,dc=com
+member: uid=zwashburne,ou=people,dc=firefly,dc=com
+
+dn: cn=flight_ops,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: flight_ops
+description: Personnel required to keep the ship in the air
+member: uid=hwashburne,ou=people,dc=firefly,dc=com
+member: uid=kfrye,ou=people,dc=firefly,dc=com
+
+dn: cn=combat_team,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: combat_team
+description: Primary muscle and security detail
+member: uid=mreynolds,ou=people,dc=firefly,dc=com
+member: uid=zwashburne,ou=people,dc=firefly,dc=com
+member: uid=jcobb,ou=people,dc=firefly,dc=com
+member: uid=rtam,ou=people,dc=firefly,dc=com
+
+dn: cn=fugitives,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: fugitives
+description: Wanted by the Alliance, keep off primary manifests
+member: uid=stam,ou=people,dc=firefly,dc=com
+member: uid=rtam,ou=people,dc=firefly,dc=com
+
+dn: cn=underworld,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: underworld
+description: Fences, smugglers, and crime lords operating outside Alliance law
+member: uid=badger,ou=people,dc=firefly,dc=com
+member: uid=aniska,ou=people,dc=firefly,dc=com
+member: uid=fanty,ou=people,dc=firefly,dc=com
+member: uid=mingo,ou=people,dc=firefly,dc=com
+# Jayne is cross-listed here due to his mercenary nature
+member: uid=jcobb,ou=people,dc=firefly,dc=com 
+
+dn: cn=adversaries,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: adversaries
+description: Known active threats to the Serenity crew
+member: uid=aniska,ou=people,dc=firefly,dc=com
+member: uid=jearly,ou=people,dc=firefly,dc=com
+member: uid=saffron,ou=people,dc=firefly,dc=com
+
+dn: cn=associates,ou=groups,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: associates
+description: Third-party contacts and fences used for jobs
+member: uid=badger,ou=people,dc=firefly,dc=com
+member: uid=fanty,ou=people,dc=firefly,dc=com
+member: uid=mingo,ou=people,dc=firefly,dc=com
+
+# --- Locations Structure ---
+
+dn: ou=locations,dc=firefly,dc=com
+objectClass: organizationalUnit
+ou: locations
+
+# --- Specific Places and Who Is There ---
+
+dn: cn=serenity,ou=locations,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: serenity
+description: Firefly-class transport ship, currently in transit
+# The Crew
+member: uid=mreynolds,ou=people,dc=firefly,dc=com
+member: uid=zwashburne,ou=people,dc=firefly,dc=com
+member: uid=hwashburne,ou=people,dc=firefly,dc=com
+member: uid=kfrye,ou=people,dc=firefly,dc=com
+member: uid=jcobb,ou=people,dc=firefly,dc=com
+# The Passengers
+member: uid=iserra,ou=people,dc=firefly,dc=com
+member: uid=stam,ou=people,dc=firefly,dc=com
+member: uid=rtam,ou=people,dc=firefly,dc=com
+member: uid=dbook,ou=people,dc=firefly,dc=com
+
+dn: cn=persephone,ou=locations,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: persephone
+description: Civilized core-ward planet with a bustling underworld
+member: uid=badger,ou=people,dc=firefly,dc=com
+
+dn: cn=ezra,ou=locations,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: ezra
+description: An orbital Skyplex acting as a hub for illegal commerce
+member: uid=aniska,ou=people,dc=firefly,dc=com
+
+dn: cn=beaumonde,ou=locations,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: beaumonde
+description: Wealthy, heavily industrialized planet
+member: uid=fanty,ou=people,dc=firefly,dc=com
+member: uid=mingo,ou=people,dc=firefly,dc=com
+
+dn: cn=triumph,ou=locations,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: triumph
+description: Backwater moon where Saffron was "married" to Mal
+member: uid=saffron,ou=people,dc=firefly,dc=com
+
+dn: cn=deep_space,ou=locations,dc=firefly,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: deep_space
+description: Drifting without propulsion in the black
+member: uid=jearly,ou=people,dc=firefly,dc=com
+
+

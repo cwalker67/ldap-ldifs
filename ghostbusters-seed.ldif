@@ -1,0 +1,378 @@
+dn: dc=ghostbusters,dc=com
+dc: ghostbusters
+o: ghostbusters
+objectclass: top
+objectclass: dcObject
+objectclass: organization
+
+# Users
+dn: ou=users,dc=ghostbusters,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: users
+
+# Original: Peter Venkman, Ray Stantz, Egon Spengler, Winston Zeddemore
+
+dn: uid=espengler,ou=users,dc=ghostbusters,dc=com
+cn: Egon
+givenname: egon
+uidNumber: 10000
+gidNumber: 10000
+homedirectory: /home/espengler
+mail: espengler@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Spengler
+uid: espengler
+userPassword: password123
+
+dn: uid=rstantz,ou=users,dc=ghostbusters,dc=com
+cn: Ray
+givenname: ray
+uidNumber: 10001
+gidNumber: 10001
+homedirectory: /home/rstantz
+mail: rstantz@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Stantz
+uid: rstantz
+userPassword: password123
+
+dn: uid=pvenkman,ou=users,dc=ghostbusters,dc=com
+cn: Peter
+givenname: peter
+uidNumber: 10002
+gidNumber: 10002
+homedirectory: /home/pvenkman
+mail: pvenkman@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Venkman
+uid: pvenkman
+userPassword: password123
+
+dn: uid=wzeddemore,ou=users,dc=ghostbusters,dc=com
+cn: Winston
+givenname: winston
+uidNumber: 10003
+gidNumber: 10003
+homedirectory: /home/wzeddemore
+mail: wzeddemore@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Zeddemore
+uid: wzeddemore
+userPassword: password123
+
+
+# Afterlife: Phoebe Spengler, Trevor Spengler, Callie Spengler, Gary Grooberson
+dn: uid=pspengler,ou=users,dc=ghostbusters,dc=com
+cn: Phoebe
+givenname: phoebe
+uidNumber: 10004
+gidNumber: 10004
+homedirectory: /home/pspengler
+mail: pspengler@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Spengler
+uid: pspengler
+userPassword: password123
+
+dn: uid=tspengler,ou=users,dc=ghostbusters,dc=com
+cn: Trevor
+givenname: trevor
+uidNumber: 10005
+gidNumber: 10005
+homedirectory: /home/tspengler
+mail: tspengler@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Spengler
+uid: tspengler
+userPassword: password123
+
+dn: uid=cspengler,ou=users,dc=ghostbusters,dc=com
+cn: Callie
+givenname: callie
+uidNumber: 10006
+gidNumber: 10006
+homedirectory: /home/cspengler
+mail: cspengler@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Spengler
+uid: cspengler
+userPassword: password123
+
+dn: uid=ggrooberson,ou=users,dc=ghostbusters,dc=com
+cn: Gary
+givenname: gary
+uidNumber: 10007
+gidNumber: 10007
+homedirectory: /home/ggrooberson
+mail: ggrooberson@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Grooberson
+uid: ggrooberson
+userPassword: password123
+
+
+# Answer the Call: Abby Yates, Erin Gilbert, Jillian Holtzmann, Patty Tolan
+dn: uid=ayates,ou=users,dc=ghostbusters,dc=com
+cn: Abby
+givenname: abby
+uidNumber: 10008
+gidNumber: 10008
+homedirectory: /home/ayates
+mail: ayates@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Yates
+uid: ayates
+userPassword: password123
+
+dn: uid=egilbert,ou=users,dc=ghostbusters,dc=com
+cn: Erin
+givenname: erin
+uidNumber: 10009
+gidNumber: 10009
+homedirectory: /home/egilbert
+mail: egilbert@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Gilbert
+uid: egilbert
+userPassword: password123
+
+dn: uid=jholtzmann,ou=users,dc=ghostbusters,dc=com
+cn: Jillian
+givenname: jillian
+uidNumber: 10010
+gidNumber: 10010
+homedirectory: /home/jholtzmann
+mail: jholtzmann@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Holtzmann
+uid: jholtzmann
+userPassword: password123
+
+dn: uid=ptolan,ou=users,dc=ghostbusters,dc=com
+cn: Patty
+givenname: patty
+uidNumber: 10011
+gidNumber: 10011
+homedirectory: /home/ptolan
+mail: ptolan@ghostbusters.com
+objectclass: inetOrgPerson
+objectclass: top
+objectclass: posixAccount
+sn: Tolan
+uid: ptolan
+userPassword: password123
+
+
+dn: dc=franchise,dc=ghostbusters,dc=com
+associateddomain: ghostbusters.com
+dc: franchise
+objectclass: dNSDomain
+objectclass: domainRelatedObject
+objectclass: top
+
+# Manhattan, NYC
+dn: dc=manhattan,dc=franchise,dc=ghostbusters,dc=com
+associateddomain: franchise.ghostbusters.com
+dc: manhattan
+objectclass: dNSDomain
+objectclass: domainRelatedObject
+objectclass: top
+
+dn: ou=groups,dc=manhattan,dc=franchise,dc=ghostbusters,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: ou=admin,ou=groups,dc=manhattan,dc=franchise,dc=ghostbusters,dc=com
+cn: admin
+description: administrators
+member: uid=espengler,ou=users,dc=ghostbusters,dc=com
+member: uid=rstantz,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin
+
+dn: ou=technology,ou=groups,dc=manhattan,dc=franchise,dc=ghostbusters,dc=com
+cn: technology
+description: Technologists
+member: uid=espengler,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: technology
+
+dn: ou=buster,ou=groups,dc=manhattan,dc=franchise,dc=ghostbusters,dc=com
+cn: buster
+description: Ghostbusters
+member: uid=espengler,ou=users,dc=ghostbusters,dc=com
+member: uid=rstantz,ou=users,dc=ghostbusters,dc=com
+member: uid=pvenkman,ou=users,dc=ghostbusters,dc=com
+member: uid=wzeddemore,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: buster
+
+# Summerville, Oklahoma
+dn: dc=summerville,dc=franchise,dc=ghostbusters,dc=com
+associateddomain: franchise.ghostbusters.com
+dc: summerville
+objectclass: dNSDomain
+objectclass: domainRelatedObject
+objectclass: top
+
+dn: ou=groups,dc=summerville,dc=franchise,dc=ghostbusters,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: ou=admin,ou=groups,dc=summerville,dc=franchise,dc=ghostbusters,dc=com
+cn: admin
+description: administrators
+member: uid=pspengler,ou=users,dc=ghostbusters,dc=com
+member: uid=ggrooberson,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin
+
+dn: ou=technology,ou=groups,dc=summerville,dc=franchise,dc=ghostbusters,dc=com
+cn: technology
+description: Technologists
+member: uid=ggrooberson,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: technology
+
+dn: ou=buster,ou=groups,dc=summerville,dc=franchise,dc=ghostbusters,dc=com
+cn: buster
+description: Ghostbusters
+member: uid=pspengler,ou=users,dc=ghostbusters,dc=com
+member: uid=ggrooberson,ou=users,dc=ghostbusters,dc=com
+member: uid=cspengler,ou=users,dc=ghostbusters,dc=com
+member: uid=tspengler,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: buster
+
+
+# Chinatown, NYC
+dn: dc=chinatown,dc=franchise,dc=ghostbusters,dc=com
+associateddomain: franchise.ghostbusters.com
+dc: chinatown
+objectclass: dNSDomain
+objectclass: domainRelatedObject
+objectclass: top
+
+dn: ou=groups,dc=chinatown,dc=franchise,dc=ghostbusters,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: ou=admin,ou=groups,dc=chinatown,dc=franchise,dc=ghostbusters,dc=com
+cn: admin
+description: administrators
+member: uid=ayates,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin
+
+dn: ou=technology,ou=groups,dc=chinatown,dc=franchise,dc=ghostbusters,dc=com
+cn: technology
+description: Technologists
+member: uid=jholtzmann,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: technology
+
+dn: ou=buster,ou=groups,dc=chinatown,dc=franchise,dc=ghostbusters,dc=com
+cn: buster
+description: Ghostbusters
+member: uid=ayates,ou=users,dc=ghostbusters,dc=com
+member: uid=egilbert,ou=users,dc=ghostbusters,dc=com
+member: uid=jholtzmann,ou=users,dc=ghostbusters,dc=com
+member: uid=ptolan,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: buster
+
+
+# Vault Access
+dn: dc=vault,dc=ghostbusters,dc=com
+associateddomain: ghostbusters.com
+dc: vault
+objectclass: dNSDomain
+objectclass: domainRelatedObject
+objectclass: top
+
+dn: ou=groups,dc=vault,dc=ghostbusters,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: groups
+
+dn: ou=admin,ou=groups,dc=vault,dc=ghostbusters,dc=com
+cn: admin
+description: administrators
+member: uid=ayates,ou=users,dc=ghostbusters,dc=com
+member: uid=ggrooberson,ou=users,dc=ghostbusters,dc=com
+member: uid=espengler,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin
+
+dn: ou=admin-manhattan,ou=groups,dc=vault,dc=ghostbusters,dc=com
+cn: admin-manhattan
+description: manhattab administrators
+member: uid=espengler,ou=users,dc=ghostbusters,dc=com
+member: uid=rstantz,ou=users,dc=ghostbusters,dc=com
+member: uid=pvenkman,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin-manhattan
+
+dn: ou=read-manhattan,ou=groups,dc=vault,dc=ghostbusters,dc=com
+cn: read-manhattan
+description: manhattam read only
+member: uid=wzeddemore,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: read-manhattan
+
+dn: ou=admin-chinatown,ou=groups,dc=vault,dc=ghostbusters,dc=com
+cn: admin-chinatown
+description: chinatown administrators
+member: uid=ayates,ou=users,dc=ghostbusters,dc=com
+member: uid=egilbert,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin-chinatown
+
+dn: ou=admin-summerville,ou=groups,dc=vault,dc=ghostbusters,dc=com
+cn: admin-summerville
+description: summerville administrators
+member: uid=pspengler,ou=users,dc=ghostbusters,dc=com
+member: uid=ggrooberson,ou=users,dc=ghostbusters,dc=com
+member: uid=cspengler,ou=users,dc=ghostbusters,dc=com
+objectclass: top
+objectClass: groupOfNames
+ou: admin-summerville
